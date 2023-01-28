@@ -1,1 +1,10 @@
 <router-outlet></router-outlet>
+<app-home
+  [textBox]="'Input Todo'"
+
+  [dropDownlabel]="'priority'"
+  [dropDownOptions]="['High', 'Medium', 'Low']"
+
+  [dropDownlabel2]="'Do you want to set Deadline ? '"
+  [dropDownOptions2]="['YES', 'NO']"
+></app-home>

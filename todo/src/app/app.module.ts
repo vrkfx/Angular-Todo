@@ -14,6 +14,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import {MatSelectModule} from '@angular/material/select';
+
 
 //Components
 import { AppComponent } from './app.component';
@@ -27,13 +29,14 @@ const routes: Routes=[
   { path:'todo', component: TodoComponent },
   //Path Match Can be 'full' or prefix
   { path: '', redirectTo: '/todo', pathMatch: 'full' },
-  { path:'', component: TodoComponent },
+  // { path:'home', component: HomeComponent },
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoComponent
+    TodoComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +49,7 @@ const routes: Routes=[
     MatButtonModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatSelectModule,
     //Router
     RouterModule.forRoot(routes),
     //Form
