@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // RouterModules
 import { Routes, RouterModule } from '@angular/router';
@@ -9,8 +8,15 @@ import { Routes, RouterModule } from '@angular/router';
 //Angular Material
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatFormFieldModule} from '@angular/material/form-field'
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 //Components
+import { AppComponent } from './app.component';
 import { TodoComponent } from './todo/todo.component';
 import { HomeComponent } from './home/home.component';
 
@@ -31,9 +37,15 @@ const routes: Routes=[
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     //Material UI test
     MatSlideToggleModule,
     MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    MatButtonModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     //Router
     RouterModule.forRoot(routes),
     //Form
@@ -44,7 +56,9 @@ const routes: Routes=[
   exports:[
     RouterModule,
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
