@@ -1,5 +1,5 @@
 <router-outlet></router-outlet>
-<app-home
+<!-- <app-home
   [textBox]="'Input Todo'"
 
   [dropDownlabel]="'priority'"
@@ -7,4 +7,7 @@
 
   [dropDownlabel2]="'Do you want to set Deadline ? '"
   [dropDownOptions2]="['YES', 'NO']"
-></app-home>
+></app-home> -->
+<app-new-form (taskAdded)="handleTaskAdded($event)"></app-new-form>
+<app-form-component *ngFor="let item of tasks" [task]="item" (removeTask)="handleTaskRemoved($event)"></app-form-component>
+

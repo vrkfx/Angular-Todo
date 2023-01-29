@@ -1,0 +1,9 @@
+
+<mat-card>
+  <mat-card-title>{{ task.title }}</mat-card-title>
+  <mat-card-content>{{ task.description }}</mat-card-content>
+  <mat-card-content>{{ task.selectedPriorityValue }}</mat-card-content>
+  <div>
+  <button mat-raised-button (click)="removeTask.emit(task)">Remove Todo</button>
+  </div>
+</mat-card>

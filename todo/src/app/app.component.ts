@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todo';
+
+  tasks: { title: string, description: string,  selectedPriorityValue:string }[] = [];
+
+  handleTaskAdded(task: { title: string, description: string,  selectedPriorityValue:string}) {
+    this.tasks.push(task);
+    console.log(task)
+  }
+
+  handleTaskRemoved(task: { title: string, description: string,  selectedPriorityValue:string }) {
+    this.tasks = this.tasks.filter(t => t !== task);
+    console.log(this.tasks)
+  }
 }

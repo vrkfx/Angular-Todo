@@ -16,6 +16,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
+import {MatCardModule} from '@angular/material/card';
+
 
 //Components
 import { AppComponent } from './app.component';
@@ -24,6 +26,8 @@ import { HomeComponent } from './home/home.component';
 
 //Form Modules
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { NewFormComponent } from './new-form/new-form.component';
+import { FormComponentComponent } from './form-component/form-component.component';
 
 const routes: Routes=[
   { path:'todo', component: TodoComponent },
@@ -37,6 +41,8 @@ const routes: Routes=[
     AppComponent,
     TodoComponent,
     HomeComponent,
+    NewFormComponent,
+    FormComponentComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +57,7 @@ const routes: Routes=[
     MatNativeDateModule,
     MatSelectModule,
     MatTableModule,
+    MatCardModule,
     //Router
     RouterModule.forRoot(routes),
     //Form
