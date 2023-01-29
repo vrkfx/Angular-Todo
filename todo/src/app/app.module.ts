@@ -15,7 +15,7 @@ import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select';
-
+import {MatTableModule} from '@angular/material/table';
 
 //Components
 import { AppComponent } from './app.component';
@@ -50,6 +50,7 @@ const routes: Routes=[
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
+    MatTableModule,
     //Router
     RouterModule.forRoot(routes),
     //Form

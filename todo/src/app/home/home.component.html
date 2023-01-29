@@ -37,11 +37,34 @@
   </mat-form-field>
 </div>
 
+<!-- passing values through Button -->
+<!-- <button mat-raised-button color="primary" (click)="onSubmit(textInput,selectedPriorityValue)">Submit</button> -->
 <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+
+<!-- Testing Purpose -->
 <div>
-  Test
-{{textInput}}
-{{selectedPriorityValue}}
-{{selectedDeadlineValue}}
-{{dateValue}}
+<table>
+  <tr>
+    <td>ToDo</td>
+    <td>Priority</td>
+    <td>Deadline</td>
+    <td>Date</td>
+  </tr>
+  <tr>
+    <td>{{textInput}}</td>
+    <td>{{selectedPriorityValue}}</td>
+    <td>{{selectedDeadlineValue}}</td>
+    <td>{{dateValue}}</td>
+  </tr>
+</table>
+</div>
+
+<div>
+  <form>
+    <input [formControl]="newTodo">
+    <button (click)="addTodo()">Add</button>
+  </form>
+  <ul>
+    <li *ngFor="let item of todoItems">{{item}}</li>
+  </ul>
 </div>

@@ -7,4 +7,26 @@ import { Component } from '@angular/core';
 })
 export class TodoComponent {
 
+  todos: Todo[] = [];
+  newTodo: Todo = {
+    title: '',
+    description: '',
+    dueDate: ''
+  };
+
+  addTodo() {
+    this.todos.push(this.newTodo);
+    this.newTodo = {
+      title: '',
+      description: '',
+      dueDate: ''
+    };
+    console.log(this.todos)
+  }
+}
+
+interface Todo {
+  title: string;
+  description: string;
+  dueDate: string;
 }
