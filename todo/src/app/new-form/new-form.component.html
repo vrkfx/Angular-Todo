@@ -1,7 +1,8 @@
 <form>
-  <div>
+  <div class="parent">
+    <div class="header">TODO LIST</div>
     <div>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" [style.width.em]="25">
         <mat-label>To-Do Task</mat-label>
         <input
           matInput
@@ -12,7 +13,7 @@
       </mat-form-field>
     </div>
     <div>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" [style.width.em]="25">
         <mat-label>To-Do Description</mat-label>
         <textarea
           matInput
@@ -27,7 +28,7 @@
 
     </div>
     <div>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" [style.width.em]="25">
         <mat-label> Task Priority</mat-label>
         <mat-select [(ngModel)]="newTask.selectedPriorityValue" name="selectedPriorityValue">
           <mat-option *ngFor="let selectedPriorityValue of dropDownOptions"  [value]="selectedPriorityValue" >
@@ -37,8 +38,8 @@
       </mat-form-field>
 
     </div>
-    <div>
-      <button mat-raised-button (click)="addTask()">Add</button>
+    <div >
+      <button mat-raised-button style="color: rgb(0, 0, 0); background-color: rgb(167, 167, 167);" (click)="addTask()">Create Todo</button>
     </div>
   </div>
 </form>
