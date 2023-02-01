@@ -18,17 +18,22 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import {MatCardModule} from '@angular/material/card';
 
-
+//Flex Layout
+import { FlexModule } from '@angular/flex-layout';
+import { GridModule } from '@angular/flex-layout/grid';
+// import { FlexLayoutModule } from '@angular/flex-layout/module';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 //Components
 import { AppComponent } from './app.component';
 import { TodoComponent } from './todo/todo.component';
 import { HomeComponent } from './home/home.component';
+import { NewFormComponent } from './new-form/new-form.component';
+import { FormComponentComponent } from './form-component/form-component.component';
 
 //Form Modules
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { NewFormComponent } from './new-form/new-form.component';
-import { FormComponentComponent } from './form-component/form-component.component';
+
 
 const routes: Routes=[
   { path:'todo', component: TodoComponent },
@@ -64,6 +69,10 @@ const routes: Routes=[
     //Form
     FormsModule,
     ReactiveFormsModule,
+    //layout
+    FlexModule ,
+    GridModule,
+    FlexLayoutModule,
   ],
   //need to add Export for Router Module
   exports:[
