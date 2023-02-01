@@ -9,5 +9,5 @@
   [dropDownOptions2]="['YES', 'NO']"
 ></app-home> -->
 <app-new-form (taskAdded)="handleTaskAdded($event)"></app-new-form>
-<app-form-component *ngFor="let item of tasks" [task]="item" (removeTask)="handleTaskRemoved($event)"></app-form-component>
+<app-form-component *ngFor="let item of tasks" [task]="item" (removeTask)="handleTaskRemoved($event)" (editTask)="handleTaskEdit($event)"></app-form-component>
 

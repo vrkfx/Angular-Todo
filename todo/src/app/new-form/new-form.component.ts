@@ -12,7 +12,7 @@ export class NewFormComponent  {
   dropDownOptions: string[] = ['Low', 'Medium', 'High'];
 
   addTask() {
-    if(this.newTask.title.length != 0 || this.newTask.description.length != 0 ) {
+    if(this.newTask.title.length != 0 && this.newTask.description.length != 0 ) {
       this.taskAdded.emit(this.newTask);
       this.newTask = { title: '', description: '', selectedPriorityValue: '' };
       console.log(this.newTask)

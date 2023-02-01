@@ -9,4 +9,7 @@ import { Component , Input, Output, EventEmitter} from '@angular/core';
 export class FormComponentComponent {
   @Input() task = { title: '', description: '', selectedPriorityValue:'' };
   @Output() removeTask = new EventEmitter<{ title: string, description: string, selectedPriorityValue:string  }>();
+  @Output() editTask = new EventEmitter<{ title: string, description: string, selectedPriorityValue:string  }>();
+
+
 }
